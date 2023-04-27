@@ -13,8 +13,6 @@ from langchain.llms import OpenAI
 
 
 # Logueo en OpenAI
-os.environ["OPENAI_API_KEY"] = ""
-
 # Select which embeddings we want to use
 embeddings = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
 
