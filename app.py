@@ -35,15 +35,15 @@ documento_seleccionado = st.selectbox('Documento:', vectorstore)
 # define el valor de 'k', que es el número de resultados que genera la búsqueda sobre los chunks y
 # define el link a utilizar para mostrar el documento en la app.
 if documento_seleccionado == 'Reportaje IA':
-    doc = 'reportaje'
+    doc = 'https://drive.google.com/drive/folders/19yYA1P3LppijOesW1TxpkbNhWwA5nsHf?usp=share_link'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
-    doc = 'OGUC_2016_removed'
+    doc = 'https://drive.google.com/drive/folders/1RYTloSyBv2Ina62R2h4Ealw_8hh6ScFV?usp=share_link'
     k = 2
     link = "[Enlace al documento](https://drive.google.com/file/d/1IORJZnoKxdF44FAGY5UE8Na4iVZxX0YK/view?usp=share_link)"
 elif documento_seleccionado == 'NCh 433 Of.96 Mod.2009':
-    doc = 'nch_433_mod_test_2'
+    doc = 'https://drive.google.com/drive/folders/1Asyj2ZAQEO_ZYjxnmv3LjtPABvtqdtmE?usp=share_link'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/1_htone_jV9mk-RYddheTis1a2_4KiKbS/view?usp=share_link)"
 
