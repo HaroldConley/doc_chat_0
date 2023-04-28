@@ -1,6 +1,8 @@
 import streamlit as st
 
 import os
+import shutil
+import tempfile
 
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
@@ -33,7 +35,8 @@ documento_seleccionado = st.selectbox('Documento:', vectorstore)
 # define el valor de 'k', que es el número de resultados que genera la búsqueda sobre los chunks y
 # define el link a utilizar para mostrar el documento en la app.
 if documento_seleccionado == 'Reportaje IA':
-    doc = 'https://drive.google.com/drive/folders/19yYA1P3LppijOesW1TxpkbNhWwA5nsHf?usp=share_link'
+    doc = tempfile.TemporaryDirectory().name
+    shutil.copytree('https://drive.google.com/drive/folders/19yYA1P3LppijOesW1TxpkbNhWwA5nsHf?usp=share_link', doc)
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
