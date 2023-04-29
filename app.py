@@ -1,9 +1,6 @@
 import streamlit as st
 
 import os
-import shutil
-import tempfile
-import git
 
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
@@ -41,11 +38,11 @@ if documento_seleccionado == 'Reportaje IA':
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
-    doc = 'https://drive.google.com/drive/folders/1RYTloSyBv2Ina62R2h4Ealw_8hh6ScFV?usp=share_link'
+    doc = '/app/doc_chat_0/OGUC_2016_removed/'
     k = 2
     link = "[Enlace al documento](https://drive.google.com/file/d/1IORJZnoKxdF44FAGY5UE8Na4iVZxX0YK/view?usp=share_link)"
 elif documento_seleccionado == 'NCh 433 Of.96 Mod.2009':
-    doc = 'https://drive.google.com/drive/folders/1Asyj2ZAQEO_ZYjxnmv3LjtPABvtqdtmE?usp=share_link'
+    doc = '/app/doc_chat_0/nch_433_mod_test_2/'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/1_htone_jV9mk-RYddheTis1a2_4KiKbS/view?usp=share_link)"
 
@@ -58,9 +55,11 @@ retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": k})
 # create a chain to answer questions
 qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=retriever, return_source_documents=True)
 
+# Muestra link al documento correspondiente
+st.markdown(link)
+
 # Ingreso de la pregunta.
 query = st.text_area("Escribe tu pregunta aquí:")
-
 
 # Generación de la respuesta.
 # Agregue un botón "Responder" a la interfaz de usuario
@@ -77,6 +76,3 @@ if st.button('Responder'):
         # Muestra de la respuesta y las páginas (fuentes)
         st.markdown(result['result'], unsafe_allow_html=True)
         st.text(f'Fuente: páginas {paginas_str} del documento.')
-
-        # Muestra link al documento correspondiente
-        st.markdown(link)
