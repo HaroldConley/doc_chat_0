@@ -34,7 +34,8 @@ documento_seleccionado = st.selectbox('Documento:', vectorstore)
 # define el link a utilizar para mostrar el documento en la app.
 if documento_seleccionado == 'Reportaje IA':
     # Clonar la carpeta reportaje del repositorio
-    doc = '/app/doc_chat_0/reportaje/'
+    #doc = '/app/doc_chat_0/reportaje/'
+    doc = 'https://github.com/HaroldConley/doc_chat_0/tree/main/reportaje'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
