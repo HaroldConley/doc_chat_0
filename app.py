@@ -72,10 +72,10 @@ if st.button('Responder'):
         result = qa({"query": query})
 
         # Creación del listado de páginas para citarlas como fuente.
-        paginas = [result['source_documents'][i].metadata['page'] + 1 for i in range(0, len(result['source_documents']))]
-        paginas_str = ", ".join(str(p) for p in paginas[:-1])
-        paginas_str += f" y {paginas[-1]}"
+        #paginas = [result['source_documents'][i].metadata['page'] + 1 for i in range(0, len(result['source_documents']))]
+        #paginas_str = ", ".join(str(p) for p in paginas[:-1])
+        #paginas_str += f" y {paginas[-1]}"
 
         # Muestra de la respuesta y las páginas (fuentes)
         st.markdown(result['result'], unsafe_allow_html=True)
-        st.text(f'Fuente: páginas {paginas_str} del documento.')
+        #st.text(f'Fuente: páginas {paginas_str} del documento.')
