@@ -10,7 +10,7 @@ from langchain.llms import OpenAI
 
 # =============================== IMPORTANTE ================================== #
 # En 'Interpreter options' poner: -m streamlit run
-
+# Agregué esta línea para obligar una actualización del repositorio y ver si con eso funciona en Streamlit.
 
 # Logueo en OpenAI
 # Select which embeddings we want to use
