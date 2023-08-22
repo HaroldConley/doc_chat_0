@@ -39,11 +39,13 @@ if documento_seleccionado == 'Reportaje IA':
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
-    doc = '/app/doc_chat_0/OGUC_2016_removed/'
+    #doc = '/app/doc_chat_0/OGUC_2016_removed/'
+    doc = 'https://github.com/HaroldConley/doc_chat_0/tree/main/OGUC_2016_removed'
     k = 2
     link = "[Enlace al documento](https://drive.google.com/file/d/1IORJZnoKxdF44FAGY5UE8Na4iVZxX0YK/view?usp=share_link)"
 elif documento_seleccionado == 'NCh 433 Of.96 Mod.2009':
-    doc = '/app/doc_chat_0/nch_433_mod_test_2/'
+    #doc = '/app/doc_chat_0/nch_433_mod_test_2/'
+    doc = 'https://github.com/HaroldConley/doc_chat_0/tree/main/nch_433_mod_test_2'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/1_htone_jV9mk-RYddheTis1a2_4KiKbS/view?usp=share_link)"
 
